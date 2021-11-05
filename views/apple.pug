@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+   
+
+  
+  - var results = [{"color":"Red", "quantity":10,"cost":200},{"color":"Green","quantity":20,"cost":300},{"color":"Golden","quantity":30,"cost":100}]
+       div(class="container-fluid")
+         div(class="row")
+            each value,index in results
+              div(class="col-sm-2" onClick=`buy(${index})`)
+                p #{value.color}
+                p #{value.quantity}
+                p #{value.cost}
+                
+
+
+          
+                script.
+                     function  buy(i){
+
+                        alert(`You purchased item ${i+1}.`)
+
+                     }
