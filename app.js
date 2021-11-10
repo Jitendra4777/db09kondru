@@ -46,7 +46,7 @@ app.use('/users', usersRouter);
 app.use('/apple', appleRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
-app.use('/resource', resourceRouter);
+app.use('./resource', resourceRouter);
 // We can seed the collection if needed on server start 
 async function recreateDB(){ 
   // Delete everything 
