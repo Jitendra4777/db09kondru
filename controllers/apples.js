@@ -24,3 +24,14 @@ exports.apple_delete = function(req, res) {
 exports.apple_update_put = function(req, res) { 
     res.send('NOT IMPLEMENTED: Apple update PUT' + req.params.id); 
 }; 
+// List of all Costumes 
+exports.apple_list = async function(req, res) { 
+    try{ 
+        theApple = await apple.find(); 
+        res.send(theApple); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
