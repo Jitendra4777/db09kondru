@@ -8,4 +8,3 @@ const appleSchema = mongoose.Schema({
 module.exports = mongoose.model("apple", 
 appleSchema)
 
-var apple = require("./models/apple"); 
