@@ -8,7 +8,7 @@ var apple_controller = require('../controllers/apples');
 /// API ROUTE /// 
 
 // GET resources base. 
-router.get('/', api_controller.api); 
+router.get('/resource', api_controller.api); 
  
 /// COSTUME ROUTES /// 
  
