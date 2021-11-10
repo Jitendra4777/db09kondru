@@ -55,9 +55,10 @@ exports.apple_create_post = async function(req, res) {
     // Even though bodies can be in many different formats, we will be picky 
     // and require that it be a json object 
     // {"costume_type":"goat", "cost":12, "size":"large"} 
-    document.costume_type = req.body.color; 
-    document.cost = req.body.cost; 
+    document.color = req.body.color; 
     document.quantity = req.body.quantity; 
+    document.cost = req.body.cost; 
+    
     try{ 
         let result = await document.save(); 
         res.send(result); 
