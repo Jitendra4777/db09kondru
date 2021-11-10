@@ -6,9 +6,7 @@ var api_controller = require('../controllers/api');
 var apple_controller = require('../controllers/apples'); 
  
 /// API ROUTE /// 
-router.get('/', function(req, res, next) {
-    res.render('resource', { title: 'Selector' });
-  });
+
 // GET resources base. 
 router.get('/resource', api_controller.api); 
  
