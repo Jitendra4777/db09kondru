@@ -25,7 +25,7 @@ var appleRouter = require('./routes/apple');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
 var apple = require("./models/apple"); 
-var resource = require('./resource');
+var resource = require('./routes/resource');
 const { Db } = require('mongoose/node_modules/mongodb');
 
 var app = express();
