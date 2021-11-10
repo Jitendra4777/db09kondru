@@ -26,6 +26,6 @@ apple_controller.apple_update_put);
 router.get('/apples/:id', apple_controller.apple_detail); 
  
 // GET request for list of all Costume items. 
-router.get('/apples', apple_controller.apple_list); 
+router.get('/resource/apples', apple_controller.apple_list); 
  
 module.exports = router; 

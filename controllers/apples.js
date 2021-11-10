@@ -40,7 +40,7 @@ exports.apple_list = async function(req, res) {
 exports.apple_view_all_Page = async function(req, res) { 
     try{ 
         theCostumes = await apple.find(); 
-        res.render('apples', { title: 'Apple Search Results', results: theCostumes }); 
+        res.render('apple', { title: 'Apple Search Results', results: theCostumes }); 
     } 
     catch(err){ 
         res.status(500); 
