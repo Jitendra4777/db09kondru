@@ -8,16 +8,16 @@ var apple_controller = require('../controllers/apples');
 /// API ROUTE /// 
 
 // GET resources base. 
-router.get('/resource', api_controller.api); 
- 
+router.get('/', api_controller.api); 
+
 /// COSTUME ROUTES /// 
  
 // POST request for creating a Costume.  
 router.post('/resource/apples', apple_controller.apple_create_post); 
- 
+
 // DELETE request to delete Costume. 
 router.delete('/resource/apples/:id', apple_controller.apple_delete); 
- 
+
 // PUT request to update Costume. 
 router.put('/resource/apples/:id', 
 apple_controller.apple_update_put); 
