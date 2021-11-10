@@ -25,6 +25,7 @@ var appleRouter = require('./routes/apple');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
 var apple = require("./models/apple"); 
+var resourceRouter = require("./routes/resource"); 
 const { Db } = require('mongoose/node_modules/mongodb');
 
 var app = express();
@@ -45,6 +46,7 @@ app.use('/users', usersRouter);
 app.use('/apple', appleRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
+app.use('/resource', resourceRouter);
 // We can seed the collection if needed on server start 
 async function recreateDB(){ 
   // Delete everything 
