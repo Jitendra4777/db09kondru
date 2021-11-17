@@ -1,8 +1,10 @@
+var apple = require('../models/apple'); 
 // Handle a show one view with id specified by query 
 exports.apple_view_one_Page = async function(req, res) { 
     console.log("single view for id "  + req.query.id) 
     try{ 
         result = await apple.findById( req.query.id) 
+        console.log(result)
         res.render('appledetail',  
 { title: 'apple Detail', toShow: result }); 
     } 
