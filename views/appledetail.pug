@@ -1,0 +1,22 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  - let appleid = toShow._id 
+  - let color = toShow.color 
+  - let quantity = toShow.quantity 
+  - let cost = toShow.cost 
+  div 
+    div.row 
+      div(class='appleAttr mr-3') apple ID is: 
+      div #{appleid} 
+    div.row 
+      div(class='appleAttr mr-3') apple color is: 
+      div #{color} 
+    div.row 
+      div(class='appleAttr mr-3') apple quantity is: 
+      div #{quantity} 
+    div.row 
+      div(class='appleAttr mr-3') apple cost is: 
+      div #{cost} 

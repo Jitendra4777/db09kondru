@@ -4,28 +4,32 @@ var router = express.Router();
 // Require controller modules. 
 var api_controller = require('../controllers/api'); 
 var apple_controller = require('../controllers/apples'); 
+var apple_view = require('../controllers/newC'); 
  
 /// API ROUTE /// 
 
 // GET resources base. 
 router.get('/', api_controller.api); 
 
-/// COSTUME ROUTES /// 
+/// apple ROUTES /// 
  
-// POST request for creating a Costume.  
+// POST request for creating a apple.  
 router.post('/apples', apple_controller.apple_create_post); 
 
-// DELETE request to delete Costume. 
+// DELETE request to delete apple. 
 router.delete('/apples/:id', apple_controller.apple_delete); 
 
-// PUT request to update Costume. 
+// PUT request to update apple. 
 router.put('/apples/:id', 
 apple_controller.apple_update_put); 
  
-// GET request for one Costume. 
+// GET request for one apple. 
 router.get('/apples/:id', apple_controller.apple_detail); 
  
-// GET request for list of all Costume items. 
+// GET request for list of all apple items. 
 router.get('/apples', apple_controller.apple_list); 
+
+/* GET detail apple page */ 
+router.get('/detail', apple_view.apple_view_one_Page); 
  
 module.exports = router; 

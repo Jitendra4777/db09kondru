@@ -95,3 +95,15 @@ ${JSON.stringify(req.body)}`)
 failed`); 
     } 
 }; 
+// Handle apple delete on DELETE. 
+exports.apple_delete = async function(req, res) { 
+    console.log("delete "  + req.params.id) 
+    try { 
+        result = await apple.findByIdAndDelete( req.params.id) 
+        console.log("Removed " + result) 
+        res.send(result) 
+    } catch (err) { 
+        res.status(500) 
+        res.send(`{"error": Error deleting ${err}}`); 
+    } 
+}; 
