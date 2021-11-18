@@ -31,5 +31,14 @@ router.get('/apples', apple_controller.apple_list);
 
 /* GET detail apple page */ 
 router.get('/detail', apple_view.apple_view_one_Page); 
+
+/* GET create apple page */ 
+router.get('/create',apple_view.apple_create_Page); 
+
+/* GET create update page */ 
+router.get('/update', apple_view.apple_update_Page);
+
+/* GET create costume page */ 
+router.get('/delete', apple_view.apple_delete_Page); 
  
 module.exports = router; 
