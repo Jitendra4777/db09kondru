@@ -76,13 +76,13 @@ async function recreateDB(){
   await apple.deleteMany(); 
  
   let instance1 = new 
-apple({color:"Red", quantity:10, 
+apple({color:"Red", quantity:3, 
 cost:100}); 
 let instance2 = new 
-apple({color:"Green", quantity:20, 
+apple({color:"Green", quantity:4, 
 cost:300}); 
 let instance3 = new 
-apple({color:"Golden", quantity:30, 
+apple({color:"Golden", quantity:5, 
 cost:100}); 
   instance1.save( function(err,doc) { 
       if(err) return console.error(err); 

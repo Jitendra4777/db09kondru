@@ -2,16 +2,24 @@ extends layout
  
 block content 
   h1= title 
-  - let items = results;
-         div(class="container-fluid") 
+   - let destination1 = `dispatch(\"/resource/create\")`
+    - let items = results; 
+      div(class="container-fluid") 
+         a(class="btn btn-primary" href="/resource/create") Create
+         <br> 
+          <br>
             div(class="row m-1") 
               each item in items  
                 - let destination = `dispatch(\"/resource/update?id=${item._id}\")` 
-                  div(class="row-sm-2", class="m-1") Item #{item.color}(#{item.quantity}) is #{item.cost} 
-                    button.btn( class="btn-primary ml-1", onclick= destination) Update 
+                  - let destination2 = `dispatch(\"/resource/detail?id=${item._id}\")` 
+                    - let destination3 = `dispatch(\"/resource/delete\")` 
+                      div(class="row-sm-2", class="m-1") Item #{item.color}(#{item.quantity}) is #{item.cost} 
+                        button.btn( class="btn-primary ml-1", onclick= destination) Update
+                          button.btn( class="btn-primary ml-1", onclick= destination2) Details 
+                            button.btn( class="btn-primary ml-1", onclick= destination3) Delete 
    
-                        script. 
-                          function dispatch(path){ 
-                                window.location.href=path 
-                                } 
+                             script. 
+                                function dispatch(path){ 
+                                   window.location.href=path 
+                                  } 
  

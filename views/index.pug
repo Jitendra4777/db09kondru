@@ -1,23 +1,12 @@
-extends layout
-
-block content
-  h1= title
-  p This is Jitendra Kondru
-  br 
-  button(type="button", class="btn btn-secondary" onClick="update()") Press Me
-  br
-  br
-  div(id="target") Display
-  br
-  br
-  a(href='/apple') Apple Page
-
-  script. 
-         var client_count = 0;
-         function  update() {
-          
-                client_count++;
-               
-             document.getElementById("target").innerHTML ="Value now "+client_count;
-          }
-           
+extends layout 
+ 
+block content 
+  if (!user) 
+    a(href="/login") Login 
+    br 
+    a(href="/register") Register 
+  if (user) 
+    p You are currently logged in as #{user.username} 
+    a(href="/apple") Take me to Apple 
+    br 
+    a(href="/logout") Logout 
